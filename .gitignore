@@ -1,0 +1,10 @@
+input/
+senosrs/
+sensors/KETI
+
+*.log
+
+.DS_Store
+
+sensors.csv
+sensors.zip

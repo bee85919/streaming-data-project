@@ -66,16 +66,17 @@ def create_spark_session():
         # Spark session is established with elasticsearch and kafka jars. Suitable versions can be found in Maven repository.
         spark = (SparkSession.builder
                  .appName("Streaming Kafka-Spark")
-                 .config("spark.jars.packages", "org.elasticsearch:elasticsearch-spark-30_2.12:7.12.0,org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.0")
+                 .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.elasticsearch:elasticsearch-hadoop:8.4.0,commons-httpclient:commons-httpclient:3.1")
                  .config("spark.driver.memory", "2048m")
                  .config("spark.sql.shuffle.partitions", 4)
                  .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
                  .getOrCreate())
         logging.info('Spark session created successfully')
+        
     except Exception:
         traceback.print_exc(file=sys.stderr) # To see traceback of the error.
         logging.error("Couldn't create the spark session")
-
+        
     return spark
 
 

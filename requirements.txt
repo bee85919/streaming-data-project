@@ -1,14 +1,7 @@
-os
-sys
 kafka
 pandas
-logging
-airflow
+apache-airflow
 pyspark
-datetime
-warnings
-functools
 findspark
-traceback
 configparser
 elasticsearch

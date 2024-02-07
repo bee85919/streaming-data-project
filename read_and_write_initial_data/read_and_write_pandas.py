@@ -6,7 +6,7 @@ import os
 import pandas as pd
 from functools import reduce
 
-directory = '/home/train/datasets/KETI'
+directory = '/Users/b06/Desktop/project/streaming-data-project/sensors/KETI'
 dataframes = {}
 dataframes_room = {}
 columns = ['co2', 'humidity', 'light', 'pir', 'temperature']
@@ -59,7 +59,7 @@ def write_main_dataframe(df):
     """
     Writes the final dataframe to the local.
     """
-    df.to_csv('/home/train/data-generator/input/sensors.csv', index=False)
+    df.to_csv('/Users/b06/Desktop/project/streaming-data-project/input/pandas/sensors.csv', index=False)
 
 
 if __name__ == '__main__':
